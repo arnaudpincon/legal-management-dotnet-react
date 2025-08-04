@@ -22,7 +22,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       await authService.login(credentials);
       onLoginSuccess();
     } catch (error: any) {
-      setError(error.response?.data || "Erreur de connexion");
+      setError(error.response?.data || "Login error");
     } finally {
       setLoading(false);
     }
@@ -84,7 +84,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                 borderRadius: "5px",
                 fontSize: "16px",
               }}
-              placeholder="admin ou lawyer"
+              placeholder="admin or lawyer"
             />
           </div>
 
@@ -111,7 +111,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
                 borderRadius: "5px",
                 fontSize: "16px",
               }}
-              placeholder="password123 ou lawyer123"
+              placeholder="password123 or lawyer123"
             />
           </div>
 
@@ -149,7 +149,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
 
         <div style={{ marginTop: "20px", fontSize: "14px", color: "#666" }}>
           <p>
-            <strong>Comptes de test :</strong>
+            <strong>Test accounts :</strong>
           </p>
           <p>• admin / password123</p>
           <p>• lawyer / lawyer123</p>

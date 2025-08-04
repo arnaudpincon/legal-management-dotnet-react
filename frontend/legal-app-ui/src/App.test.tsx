@@ -18,8 +18,8 @@ test("renders login form when not authenticated", () => {
   render(<App />);
 
   // Check if the login form is displayed
-  expect(screen.getByText("🏛️ Legal App - Connexion")).toBeInTheDocument();
-  expect(screen.getByText("Nom d'utilisateur :")).toBeInTheDocument();
-  expect(screen.getByText("Mot de passe :")).toBeInTheDocument();
-  expect(screen.getByText("Se connecter")).toBeInTheDocument();
+  expect(screen.getByText("🏛️ Legal App - Login")).toBeInTheDocument();
+  expect(screen.getByText("Username :")).toBeInTheDocument();
+  expect(screen.getByText("Login :")).toBeInTheDocument();
+  expect(screen.getByText("Logging in...")).toBeInTheDocument();
 });
