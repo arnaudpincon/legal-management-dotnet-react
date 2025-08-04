@@ -22,7 +22,8 @@ namespace LegalApp.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Client>>> GetClients()
         {
-            return await _context.Clients.Where(c => c.IsActive).ToListAsync();
+            var clients = await _context.Clients.Where(c => c.IsActive).ToListAsync();
+            return Ok(clients);
         }
 
         // READ client by ID
@@ -34,7 +35,7 @@ namespace LegalApp.API.Controllers
             if (client == null || !client.IsActive)
                 return NotFound();
                 
-            return client;
+            return Ok(client);
         }
 
         // CREATE client
