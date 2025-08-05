@@ -1,0 +1,6 @@
+@LegalApp.GraphQL_HostAddress = http://localhost:5264
+
+GET {{LegalApp.GraphQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
